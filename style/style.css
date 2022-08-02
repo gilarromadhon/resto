@@ -1,0 +1,596 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins/Poppins-Thin.ttf) format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins/Poppins-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  --primary: #5a4fcf;
+  --secondary: #fdc886;
+  --white: #fff;
+  --dark: #232631;
+  --grey: #656565;
+  --background: #fafafa;
+}
+
+* {
+  font-family: "Poppins";
+}
+
+body {
+  background-color: var(--background);
+}
+
+.navbar {
+  margin: 60px 0px;
+}
+
+.navbar img {
+  width: 100px;
+}
+
+.navbar span img {
+  width: 24px;
+}
+
+.nav-link {
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 30px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: var(--primary);
+}
+
+.nav-link-grow-up::before {
+  height: 0%;
+  width: 80%;
+  bottom: 0px;
+}
+
+.nav-link-grow-up:hover::before {
+  height: 3px;
+}
+
+.navbar .navbar-action {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  position: relative;
+  margin-right: 30px;
+  width: 322px;
+}
+
+.search input {
+  padding: 16px 28px;
+  height: 60px;
+  border-radius: 12px;
+  text-indent: 35px;
+  border: none;
+}
+
+.search input:focus {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.search img {
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  width: 24px;
+}
+
+.btn-login {
+  background-color: rgb(90, 79, 207, 0.1);
+  color: var(--primary);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 28px;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.btn-login:hover {
+  background-color: var(--primary);
+  transition: 0.5s;
+  color: var(--white);
+}
+
+header {
+  margin-bottom: 120px;
+}
+
+h4 {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+}
+
+.header .location {
+  margin-bottom: 34px;
+}
+
+.header .btn-reservation {
+  background-color: var(--secondary);
+  border-radius: 12px;
+  padding: 16px 28px;
+  width: max-content;
+  margin-bottom: 12px;
+}
+
+.header .btn-reservation a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.header .btn-reservation a img {
+  width: 24px;
+}
+
+.header .cost img {
+  width: 20px;
+}
+
+.header .cost {
+  font-size: 16px;
+  color: var(--grey);
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit .row {
+  margin-top: 40px;
+}
+
+.benefit .card {
+  border: none;
+  padding: 0;
+}
+
+.benefit .card,
+.card-body {
+  border-radius: 24px;
+}
+
+.benefit .card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.benefit .card-text {
+  font-size: 16px;
+}
+
+.benefit .card-body img {
+  background-color: rgb(253, 200, 134, 0.15);
+  padding: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 54px;
+  margin: 24px 0px;
+}
+
+.benefit .card-action {
+  width: 100%;
+  height: 72px;
+  border-radius: 12px 12px 24px 24px;
+  border: none;
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 54px;
+  transition: background-color 0.3s;
+}
+
+.benefit .card-action:hover {
+  background-color: var(--secondary);
+  transition: 0.5s;
+}
+
+.benefit .btn-view {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.benefit .card-action img {
+  width: 24px;
+  margin-left: 5px;
+}
+
+.feature .col-md-4:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.feature p {
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 52px;
+}
+
+.feature .card-custom {
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  border-radius: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.feature .card-custom.resto-1 {
+  background-image: url("../assets/images/Bind-Balorant.png");
+  height: 475px;
+}
+
+.feature .card-custom.resto-2 {
+  background-image: url("../assets/images/Other-Restaurant.png");
+  height: 475px;
+}
+
+header .card-restaurant {
+  position: absolute;
+  top: 130px;
+  left: 56px;
+  width: 390px;
+  height: 297px;
+  padding: 24px 0px;
+  text-align: left;
+}
+
+header .card-restaurant .rating {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-restaurant {
+  width: 100%;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 24px;
+  transition: box-shadow 0.5s;
+  transition: margin-bottom 0.5s;
+}
+
+.card-restaurant:hover {
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.card-restaurant .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-restaurant .rating {
+  display: flex;
+  align-items: center;
+}
+
+.card-restaurant .rating img {
+  width: 20px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.card-restaurant .index {
+  color: var(--secondary);
+  font-size: 16px;
+}
+
+.card-restaurant .total-review {
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card-restaurant h4 {
+  color: var(--dark);
+}
+
+.card-restaurant .price {
+  color: var(--grey);
+}
+
+.card-restaurant .card-action {
+  background-color: var(--secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-restaurant .card-action img {
+  width: 24px;
+}
+
+.card-restaurant .title {
+  font-size: 16px;
+  font-size: 500;
+  color: var(--grey);
+}
+
+.card-restaurant .card-details {
+  display: none;
+  font-size: 16px;
+  font-size: 500;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.card-restaurant .card-details img {
+  width: 24px;
+}
+
+.card-restaurant:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-restaurant:hover .card-details {
+  display: block;
+}
+
+.btn-view-all {
+  background-color: var(--secondary);
+  border-radius: 12px;
+  padding: 16px 28px;
+  width: max-content;
+  transition: box-shadow 0.5s;
+}
+
+.btn-view-all a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.btn-view-all a img {
+  width: 24px;
+}
+
+.btn-view-all:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.location img {
+  width: 24px;
+  opacity: 0.75;
+}
+
+.restaurant .title-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  width: 250px;
+  height: 65px;
+  padding: 0 24px;
+  transition: background-color 0.3s;
+}
+
+.restaurant .location:hover {
+  cursor: pointer;
+  background-color: #e4e3e3;
+  transition: 0.3s;
+}
+
+.restaurant .title-content {
+  margin-bottom: 40px;
+}
+
+.restaurant .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant .card-custom {
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  border-radius: 24px;
+  width: 427px;
+  height: 415px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.restaurant .card-custom.resto-1 {
+  background-image: url("../assets/images/Batavia.png");
+}
+
+.restaurant .card-custom.resto-2 {
+  background-image: url("../assets/images/Split-Accent.png");
+}
+
+.restaurant .card-custom.resto-3 {
+  background-image: url("../assets/images/Daza-Fracture.png");
+}
+
+.restaurant .btn-view-all {
+  margin-top: 56px;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+.chef h1 {
+  margin-bottom: 32px;
+}
+
+.chef .card-restaurant {
+  margin-bottom: 20px;
+}
+
+.chef .card-restaurant:hover {
+  transition: 0.5s;
+  background-color: var(--white);
+  border: none;
+}
+
+.chef .card-restaurant:hover .location img {
+  opacity: 1;
+}
+
+.chef .card-restaurant {
+  background-color: var(--background);
+}
+
+.chef .card-restaurant .col-md-4 {
+  text-align: right;
+}
+
+.chef .btn-view-all {
+  margin-top: 62px;
+}
+
+.chef .col-md-6:last-child {
+  padding-left: 64px;
+}
+
+.chef .col-md-6:first-child {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/images/Chef.png");
+}
+
+.chef .experience {
+  background-color: var(--white);
+  width: 179px;
+  height: 203px;
+  text-align: center;
+  border-radius: 24px;
+  margin-top: 40px;
+  float: right;
+  box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.04);
+}
+
+.chef .card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chef .card-text {
+  font-size: 16px;
+}
+
+.chef .card-body img {
+  background-color: rgb(253, 200, 134, 0.15);
+  padding: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 54px;
+  margin: 24px 0px;
+}
+
+.chef .restaurant {
+  position: absolute;
+  bottom: 40px;
+  background-color: var(--white);
+  padding: 24px;
+  border-radius: 24px;
+  width: 330px;
+  height: 180px;
+  box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.04);
+}
+
+.chef .restaurant .col-md-8 {
+  padding-left: 24px;
+}
+
+.chef .restaurant h4 {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--grey);
+}
+
+.chef .restaurant h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chef .restaurant .card-action {
+  margin-top: 24px;
+}
+
+.chef .restaurant .card-action a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.chef .restaurant .card-action img {
+  width: 24px;
+}
